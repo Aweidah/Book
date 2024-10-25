@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework',
-    'main'
+    'main',
+    'authuser',
 ]
 
 MIDDLEWARE = [
@@ -72,6 +73,10 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'myApp.wsgi.application'
+
+# Authentication user model
+
+AUTH_USER_MODEL = 'authuser.User'
 
 # rest framework simple jwt
 REST_FRAMEWORK = {

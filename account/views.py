@@ -6,12 +6,10 @@ from rest_framework_simplejwt.authentication import JWTAuthentication
 # from django.contrib.auth.models import User
 from rest_framework import generics
 from .serializers import UserSerializer
-from django.contrib.auth import get_user_model
+from .models import User
 
-User = get_user_model()
 
 class Home(APIView):
-    authentication_classes = [JWTAuthentication]
     permission_classes = [IsAuthenticated]
 
     def get(self, request):

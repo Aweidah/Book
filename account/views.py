@@ -15,7 +15,6 @@ from rest_framework.decorators import action
 from rest_framework_simplejwt.tokens import RefreshToken
 
 
-
 # List and Create Users
 class UserListCreateView(generics.ListCreateAPIView):
     queryset = User.objects.all()
